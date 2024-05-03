@@ -1,8 +1,8 @@
 import { Component } from 'preact'
 import ChordThumbnail from './ChordThumbnail'
-import { KeyName, keySimpleList } from '../libs/key'
-import { urlEncodeKey, urlEncodeChord, chordFilterByKeyword } from '../libs/helper'
-import { chords as Chords } from '../libs/db'
+import { KeyName, keySimpleList } from '@/libs/key'
+import { urlEncodeKey, urlEncodeChord, chordFilterByKeyword } from '@/libs/helper'
+import { chords as Chords } from '@/libs/db'
 
 type ChordSelectorProps = {
     selectedKey: KeyName

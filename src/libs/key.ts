@@ -1,4 +1,4 @@
-type KeyName =
+export type KeyName =
     'C' | 'C♯' | 'D♭' | 'D' | 'D♯' | 'E♭' | 'E' | 'F' | 'F♯' | 'G♭' | 'G' | 'G♯' | 'A♭' | 'A' | 'A♯' | 'B♭' | 'B'
 
 const Keys: Record<KeyName, number> = {
@@ -36,6 +36,6 @@ let keyPossibleName: KeyName[][] = [['C'], ['C♯', 'D♭'], ['D'], ['D♯', 'E�
 
 const OctaveKeyCount = 12
 
-type Octave = 2 | 3 | 4 | 5 | 6
+export type Octave = 2 | 3 | 4 | 5 | 6
 
-export { KeyName, Keys, keySimpleList, OctaveKeyCount, bw, bwMap, chromaticName, Octave, keyPossibleName }
+export { Keys, keySimpleList, OctaveKeyCount, bw, bwMap, chromaticName, keyPossibleName }

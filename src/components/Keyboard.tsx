@@ -1,6 +1,6 @@
 import { Component, createRef } from 'preact'
 import Key from './Key'
-import { notes as allNotes } from '../libs/db'
+import { notes as allNotes } from '@/libs/db'
 
 type KeyboardProps = {
     offset: number,

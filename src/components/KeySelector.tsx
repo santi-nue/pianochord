@@ -1,6 +1,6 @@
 import { Component } from 'preact'
-import { urlEncodeKey } from '../libs/helper'
-import { KeyName, keySimpleList } from '../libs/key'
+import { urlEncodeKey } from '@/libs/helper'
+import { KeyName, keySimpleList } from '@/libs/key'
 
 type KeySelectorProps = {
     selectedKey?: string

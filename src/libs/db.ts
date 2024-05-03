@@ -1,5 +1,5 @@
 import { Chord } from "./chord"
-import { chromaticName, KeyName, Keys, keySimpleList, Octave, OctaveKeyCount } from "./key"
+import { chromaticName, KeyName, Keys, keySimpleList, Octave } from "./key"
 import { Note } from "./note"
 
 

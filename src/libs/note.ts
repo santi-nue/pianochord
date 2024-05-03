@@ -1,5 +1,5 @@
 import { bwMap, chromaticName, KeyName, Keys, Octave, OctaveKeyCount } from './key'
-import piano from '../libs/audio'
+import piano from '@/libs/audio'
 
 class Note {
     key: KeyName

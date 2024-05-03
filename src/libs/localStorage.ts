@@ -1,4 +1,4 @@
-import { Bar, Beat, Sheet } from "pages/WhiteBoardPage";
+import { Bar, Beat, Sheet } from "@/pages/WhiteBoardPage";
 import { jingoBellSheet } from "./placeholder";
 import { inferChord } from "./helper";
 

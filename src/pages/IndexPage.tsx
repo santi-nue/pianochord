@@ -1,6 +1,6 @@
-import { Github } from '../components/icon/Github'
+import { Github } from '@/components/icon/Github'
 import { Component } from 'preact'
-import KeySelector from '../components/KeySelector'
+import KeySelector from '@/components/KeySelector'
 
 export default class IndexPage extends Component {
     render() {

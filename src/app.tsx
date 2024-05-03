@@ -1,4 +1,4 @@
-import { Fragment, h, Component, render } from 'preact'
+import { Fragment, Component, render } from 'preact'
 import Router, { RouterOnChangeArgs } from 'preact-router'
 import Match from 'preact-router/match';
 import IndexPage from './pages/IndexPage'

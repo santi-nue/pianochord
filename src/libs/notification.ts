@@ -1,6 +1,6 @@
 import { Signal, signal } from "@preact/signals";
 
-type NotificationItem = {
+export type NotificationItem = {
     id: number,
     text: string,
 }
@@ -21,4 +21,4 @@ const removeNotification = (id: number) => {
     notifications.value = notifications.value.filter(x => x.id != id)
 }
 
-export { NotificationItem, notifications, addNotification, removeNotification }
+export { notifications, addNotification, removeNotification }

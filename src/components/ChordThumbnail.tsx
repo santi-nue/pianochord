@@ -1,7 +1,7 @@
-import { Chord } from 'libs/chord'
+import { Chord } from '@/libs/chord'
 import { Component } from 'preact'
-import { getHighlightTable } from '../libs/helper'
-import { bw, bwMap } from '../libs/key'
+import { getHighlightTable } from '@/libs/helper'
+import { bw, bwMap } from '@/libs/key'
 
 const whiteWidth = 9
 const whiteHeight = 40

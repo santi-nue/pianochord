@@ -1,32 +1,34 @@
-import { Chord } from '../libs/chord'
-import { chords as Chords, modesTable } from '../libs/db'
-import { inferChord, sanitize, sum } from '../libs/helper'
-import { KeyName, Keys, keyPossibleName, keySimpleList } from '../libs/key'
+import { Chord } from '@/libs/chord'
+import { chords as Chords, modesTable } from '@/libs/db'
+import { inferChord, sanitize, sum } from '@/libs/helper'
+import { KeyName, Keys, keyPossibleName, keySimpleList } from '@/libs/key'
 import { Component, Fragment } from 'preact'
-import { PlusCircle } from '../components/icon/PlusCircle'
-import Modal from '../components/Modal'
+import { PlusCircle } from '@/components/icon/PlusCircle'
+import Modal from '@/components/Modal'
 import { signal } from "@preact/signals";
-import KeySelector from '../components/KeySelector'
-import { Plus } from '../components/icon/Plus'
-import { addNotification } from '../libs/notification'
-import { loadActiveSheet, loadSheets, saveActiveSheet, saveSheets } from '../libs/localStorage'
-import { FilePlus } from '../components/icon/FilePlus'
-import { Folder } from '../components/icon/Folder'
-import { HelpCircle } from '../components/icon/HelpCircle'
-import { Edit3 } from '../components/icon/Edit-3'
-import { Trash2 } from '../components/icon/Trash-2'
+import KeySelector from '@/components/KeySelector'
+import { Plus } from '@/components/icon/Plus'
+import { addNotification } from '@/libs/notification'
+import { loadActiveSheet, loadSheets, saveActiveSheet, saveSheets } from '@/libs/localStorage'
+import { FilePlus } from '@/components/icon/FilePlus'
+import { Folder } from '@/components/icon/Folder'
+import { HelpCircle } from '@/components/icon/HelpCircle'
+import { Edit3 } from '@/components/icon/Edit-3'
+import { Trash2 } from '@/components/icon/Trash-2'
 
-type Beat = {
+export type Beat = {
     chord?: Chord | String,
     duration: number,
     lyrics: string,
     chordDisplay: string
 }
-type Bar = {
+
+export type Bar = {
     totalBeats: number,
     beats: Beat[]
 }
-type Sheet = {
+
+export type Sheet = {
     title: string
     key: KeyName,
     mode: number,
@@ -419,5 +421,3 @@ export default class WhiteBoardPage extends Component<WhiteBoardPageProps, White
     }
 
 }
-
-export { Bar, Beat, Sheet }

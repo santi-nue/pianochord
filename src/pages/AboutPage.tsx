@@ -1,5 +1,5 @@
-import { forceDescriptives, randomList } from '../libs/helper';
-import { keySimpleList } from '../libs/key'
+import { forceDescriptives, randomList } from '@/libs/helper';
+import { keySimpleList } from '@/libs/key'
 import { Component } from 'preact'
 
 const total = keySimpleList.length * 2

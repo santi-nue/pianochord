@@ -1,12 +1,12 @@
 import { Fragment, Component } from 'preact'
-import Keyboard from '../components/Keyboard'
-import KeySelector from '../components/KeySelector'
-import { Keys, KeyName, keySimpleList } from '../libs/key'
-import ChordSelector from '../components/ChordSelector'
-import ChordDetail from '../components/ChordDetail'
-import Playbox from '../components/Playbox'
-import { getHighlightTable, chordAlignMid, urlDecodeKey, urlDecodeChord, findChordByName } from '../libs/helper'
-import { titlePrefix } from '../libs/constant'
+import Keyboard from '@/components/Keyboard'
+import KeySelector from '@/components/KeySelector'
+import { Keys, KeyName, keySimpleList } from '@/libs/key'
+import ChordSelector from '@/components/ChordSelector'
+import ChordDetail from '@/components/ChordDetail'
+import Playbox from '@/components/Playbox'
+import { getHighlightTable, chordAlignMid, urlDecodeKey, urlDecodeChord, findChordByName } from '@/libs/helper'
+import { titlePrefix } from '@/libs/constant'
 
 const MAXoctaveAdj = 1
 const MINoctaveAdj = -1
@@ -59,7 +59,7 @@ export default class ChordPage extends Component<ChordPageProps, ChordPageState>
     }
 
     componentDidUpdate() {
-        const { selectedKey, selectedChord, inversion } = this.urlDecode()
+        const { selectedKey, selectedChord } = this.urlDecode()
         if (selectedChord) {
             document.title = titlePrefix + " - " + selectedChord
         } else if (selectedKey) {

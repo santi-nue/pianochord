@@ -1,10 +1,11 @@
-import { Chord } from 'libs/chord'
-import { Keys, keySimpleList } from '../libs/key'
 import { Component, Fragment } from 'preact'
-import { intervalTable, inversionNames } from '../libs/db'
+import { route } from 'preact-router'
+
+import { Chord } from '@/libs/chord'
+import { Keys, keySimpleList } from '@/libs/key'
+import { intervalTable, inversionNames } from '@/libs/db'
 import ChordThumbnail from './ChordThumbnail'
 import { ChevronRight } from './icon/ChevronRight'
-import { route } from 'preact-router'
 import { ChevronDown } from './icon/ChevronDown'
 
 type ChordDetailProps = {

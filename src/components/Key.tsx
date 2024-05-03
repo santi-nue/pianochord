@@ -1,6 +1,6 @@
-import { Note } from 'libs/note'
+import { Note } from '@/libs/note'
 import { Component } from 'preact'
-import { bw } from '../libs/key'
+import { bw } from '@/libs/key'
 
 type KeyProps = {
     note: Note,

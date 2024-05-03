@@ -1,4 +1,8 @@
-export default function Page404() {
+type Props = {
+  default?: boolean
+}
+
+export default function Page404(_: Props) {
   return (
     <div className='Container404'>
       <h1>404</h1>

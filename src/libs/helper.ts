@@ -186,8 +186,7 @@ function forceDescriptives(list: number[], mean: number, sd: number) {
         oldMean = oldDescriptives.mean,
         oldSD = oldDescriptives.sd,
         newList = [],
-        len = list.length,
-        i;
+        len = list.length;
     for (let i = 0; i < len; i++) {
         newList[i] = sd * (list[i] - oldMean) / oldSD + mean;
     }

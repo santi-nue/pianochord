@@ -1,4 +1,4 @@
-import { Sheet } from "../pages/WhiteBoardPage"
+import { Sheet } from "@/pages/WhiteBoardPage"
 import { inferChord } from "./helper"
 
 const jingoBellSheet: Sheet = {
