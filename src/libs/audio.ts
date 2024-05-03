@@ -51,7 +51,7 @@ class Piano {
         let sample = this.samples[octave]
         if (sample === undefined) {
             this.samples[octave] = 'loading'
-            const response = await fetch(`/samples_piano_F${octave}.${this.extension}`);
+            const response = await fetch(`/audio/samples_piano_F${octave}.${this.extension}`);
             const buffer = await response.arrayBuffer();
             const data = await this.context.decodeAudioData(buffer);
             this.samples[octave] = data;
