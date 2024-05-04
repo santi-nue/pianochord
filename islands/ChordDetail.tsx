@@ -1,5 +1,4 @@
 import { Component, Fragment } from "preact";
-// import { route } from "preact-router";
 
 import { Chord } from "@/libs/chord.ts";
 import { Keys, simpleKeys } from "@/libs/key.ts";
@@ -37,7 +36,7 @@ export default class ChordDetail
         path[4] = i.toString();
       }
       if (i == 0) path = path.slice(0, 4);
-      console.log(path.join("/"));
+      history.replaceState('chord-detail', '', path.join('/'))
     };
   }
 
