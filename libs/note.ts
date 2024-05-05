@@ -1,6 +1,6 @@
 import {
   bwMap,
-  chromaticName,
+  chromaticNames,
   KeyName,
   Keys,
   Octave,
@@ -22,7 +22,7 @@ class Note {
   }
 
   toString() {
-    return chromaticName[Keys[this.key]] + this.octave;
+    return chromaticNames[Keys[this.key]] + this.octave;
   }
 
   valueOf() {

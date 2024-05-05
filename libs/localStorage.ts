@@ -8,7 +8,7 @@ const SheetsSavingKey = "whiteboardSave";
 const activeSheetSavingKey = "activeSheet";
 
 export type Beat = {
-  chord?: Chord | String;
+  chord?: Chord | string;
   duration: number;
   lyrics: string;
   chordDisplay: string;
@@ -61,7 +61,7 @@ function loadSheets(): Sheet[] {
     return defaultSheets;
   } else {
     try {
-      let data: SheetSaving[] = JSON.parse(savingStr);
+      const data: SheetSaving[] = JSON.parse(savingStr);
       data.forEach((sheet) => {
         sheet.bars.forEach((bar) => {
           bar.beats.forEach((beat) => {

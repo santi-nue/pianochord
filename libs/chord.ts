@@ -1,5 +1,5 @@
 import { sum } from "./helper.ts";
-import { keyPossibleName } from "./key.ts";
+import { possibleKeyNames } from "./key.ts";
 
 type SerializeFeature = { key: number; intervals: number[] };
 
@@ -86,7 +86,7 @@ class Chord {
         }
         const invChord = new Chord(key, interval);
         invChord.alias = this.alias.map((str) =>
-          keyPossibleName[invChord.key].map((root) => `${str}/${root}`)
+          possibleKeyNames[invChord.key].map((root) => `${str}/${root}`)
         ).flat();
         this.inversions.push(invChord);
       }

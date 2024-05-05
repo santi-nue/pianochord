@@ -4,7 +4,7 @@ import { signal } from "@preact/signals";
 import { Chord } from "@/libs/chord.ts";
 import { chords as Chords, modesTable } from "@/libs/db.ts";
 import { inferChord, sanitize, sum } from "@/libs/helper.ts";
-import { KeyName, keyPossibleName, Keys, simpleKeys } from "@/libs/key.ts";
+import { KeyName, Keys, possibleKeyNames, simpleKeys } from "@/libs/key.ts";
 import { PlusCircle } from "@/components/icon/PlusCircle.tsx";
 import Modal from "./Modal.tsx";
 import KeySelector from "./KeySelector.tsx";
@@ -98,12 +98,12 @@ export default class WhiteBoardPage
   }
 
   addBeat(
-    chord: Chord | String | undefined,
+    chord: Chord | string | undefined,
     chordDisplay: string,
     lyrics: string,
   ) {
     addBeatModal.value = { ...addBeatModal.value, show: false };
-    let beats = this.state.sheets[this.state.activeSheet]
+    const beats = this.state.sheets[this.state.activeSheet]
       .bars[addBeatModal.value.barIndex].beats;
     beats.splice(addBeatModal.value.beatIndex, 0, {
       chord,
@@ -129,7 +129,7 @@ export default class WhiteBoardPage
   }
 
   shouldDeleteBeat(barIndex: number, beatIndex: number) {
-    let beat =
+    const beat =
       this.state.sheets[this.state.activeSheet].bars[barIndex].beats[beatIndex];
     if (beat.lyrics === "" && beat.chordDisplay === "") {
       this.state.sheets[this.state.activeSheet].bars[barIndex].beats.splice(
@@ -372,7 +372,7 @@ export default class WhiteBoardPage
                           beat.chordDisplay = sanitize(div.innerHTML);
                           div.innerHTML = original;
                           // infer the chord from the edited value
-                          let inferred = inferChord(beat.chordDisplay);
+                          const inferred = inferChord(beat.chordDisplay);
                           beat.chord = inferred.chord;
                           beat.chordDisplay = inferred.chordDisplay;
                           this.shouldDeleteBeat(barIndex, beatIndex);
@@ -505,17 +505,17 @@ export default class WhiteBoardPage
             <h1>Select a chord:</h1>
             <div className={"chord-container"}>
               {(() => {
-                let interval = sum(
+                const interval = sum(
                   modesTable[this.state.sheets[this.state.activeSheet].mode]
                     .intervals.slice(0, addBeatModal.value.activeRome),
                 );
                 let keyNum =
                   Keys[this.state.sheets[this.state.activeSheet].key] +
                   interval;
-                while (keyNum >= keyPossibleName.length) {keyNum -=
-                    keyPossibleName.length;}
-                let key = keyPossibleName[keyNum][0];
-                let chords = Chords[key].filter((_, i) =>
+                while (keyNum >= possibleKeyNames.length) {keyNum -=
+                    possibleKeyNames.length;}
+                const key = possibleKeyNames[keyNum][0];
+                const chords = Chords[key].filter((_, i) =>
                   modesTable[this.state.sheets[this.state.activeSheet].mode]
                     .chordIndex[addBeatModal.value.activeRome].includes(i)
                 );

@@ -1,5 +1,5 @@
 import { Chord } from "./chord.ts";
-import { chromaticName, KeyName, Keys, Octave, simpleKeys } from "./key.ts";
+import { chromaticNames, KeyName, Keys, Octave, simpleKeys } from "./key.ts";
 import { Note } from "./note.ts";
 
 const chordTable: {
@@ -832,7 +832,7 @@ const inversionNames = [
 const notes: Note[] = [];
 // generate notes from oct 2 to oct 6 (inclusive)
 for (let oct = 2; oct <= 6; oct++) {
-  for (const k of chromaticName) {
+  for (const k of chromaticNames) {
     notes.push(new Note(k, oct as Octave));
   }
 }

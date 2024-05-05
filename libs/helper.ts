@@ -64,7 +64,7 @@ function decodeChord(chordName: string): string {
 function chordFilterByKeyword(kw: string) {
   return (chord: Chord) => {
     kw = kw.toLowerCase().replace(" ", "").replace("♯", "#").replace("♭", "b");
-    let allNames = chord.possibleNames.map((str: string) =>
+    const allNames = chord.possibleNames.map((str: string) =>
       str.toLowerCase().replace(" ", "").replace("♯", "#").replace("♭", "b")
     );
     return allNames.some((name) => name.indexOf(kw) !== -1);
@@ -78,9 +78,9 @@ function searchForChord(kw: string): Chord[] {
   };
   kw = kw.toLowerCase().replace(" ", "").replace("♯", "#").replace("♭", "b");
   if (!kw) return [];
-  let chordsWithScores: ChordScore[] = allChords.map((chord) => {
+  const chordsWithScores: ChordScore[] = allChords.map((chord) => {
     let score = 0;
-    let allNames = chord.possibleNames.map((str: string) =>
+    const allNames = chord.possibleNames.map((str: string) =>
       str.toLowerCase().replace(" ", "").replace("♯", "#").replace("♭", "b")
     );
     allNames.forEach((name) => {
@@ -93,7 +93,7 @@ function searchForChord(kw: string): Chord[] {
     score /= allNames.length;
     return { chord, score };
   });
-  let result = chordsWithScores.sort((a, b) => (b.score - a.score)).filter(
+  const result = chordsWithScores.sort((a, b) => (b.score - a.score)).filter(
     (cs) => cs.score > 0,
   ).map((cs) => cs.chord).slice(0, 20);
   return result;
@@ -105,7 +105,7 @@ function inferChord(
   function convertToLowerCaseExceptM(str: string) {
     let result = "";
     for (let i = 0; i < str.length; i++) {
-      let char = str.charAt(i);
+      const char = str.charAt(i);
       if (char !== "M") {
         result += char.toLowerCase();
       } else {
@@ -114,20 +114,20 @@ function inferChord(
     }
     return result;
   }
-  let originalKw = kw;
+  const originalKw = kw;
   kw = kw.trim().replace(" ", "").replace("♯", "#").replace("♭", "b");
-  let kwM = convertToLowerCaseExceptM(kw);
-  let kwm = kw.toLowerCase();
+  const kwM = convertToLowerCaseExceptM(kw);
+  const kwm = kw.toLowerCase();
   if (!kw) return { chordDisplay: "" };
   // search for result without lowercase M to m
-  for (let chord of allChords) {
-    let allNames = chord.possibleNames.map((str: string) =>
+  for (const chord of allChords) {
+    const allNames = chord.possibleNames.map((str: string) =>
       convertToLowerCaseExceptM(str).replace(" ", "").replace("♯", "#").replace(
         "♭",
         "b",
       )
     );
-    for (let [i, name] of allNames.entries()) {
+    for (const [i, name] of allNames.entries()) {
       if (name === kwM) {
         return {
           chord,
@@ -137,11 +137,11 @@ function inferChord(
     }
   }
   // if cannot find a match, lowercase M to m
-  for (let chord of allChords) {
-    let allNames = chord.possibleNames.map((str: string) =>
+  for (const chord of allChords) {
+    const allNames = chord.possibleNames.map((str: string) =>
       str.toLowerCase().replace(" ", "").replace("♯", "#").replace("♭", "b")
     );
-    for (let [i, name] of allNames.entries()) {
+    for (const [i, name] of allNames.entries()) {
       if (name === kwm) {
         return {
           chord,
@@ -164,7 +164,7 @@ function sum(arr: number[]) {
 
 function randomList(n: number, a: number, b: number) {
   // create a list of n numbers between a and b
-  let list = [];
+  const list = [];
   for (let i = 0; i < n; i++) {
     list[i] = Math.random() * (b - a) + a;
   }
@@ -193,7 +193,7 @@ function descriptives(list: number[]) {
 
 function forceDescriptives(list: number[], mean: number, sd: number) {
   // transfom a list to have an exact mean and sd
-  let oldDescriptives = descriptives(list),
+  const oldDescriptives = descriptives(list),
     oldMean = oldDescriptives.mean,
     oldSD = oldDescriptives.sd,
     newList = [],

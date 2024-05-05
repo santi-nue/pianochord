@@ -77,7 +77,7 @@ const simpleKeys: KeyName[] = [
   "B",
 ];
 
-const chromaticName: KeyName[] = [
+const chromaticNames: KeyName[] = [
   "C",
   "D♭",
   "D",
@@ -92,7 +92,7 @@ const chromaticName: KeyName[] = [
   "B",
 ];
 
-const keyPossibleName: KeyName[][] = [
+const possibleKeyNames: KeyName[][] = [
   ["C"],
   ["C♯", "D♭"],
   ["D"],
@@ -114,9 +114,9 @@ export type Octave = 2 | 3 | 4 | 5 | 6;
 export {
   bw,
   bwMap,
-  chromaticName,
-  keyPossibleName,
+  chromaticNames,
   Keys,
   OctaveKeyCount,
+  possibleKeyNames,
   simpleKeys,
 };

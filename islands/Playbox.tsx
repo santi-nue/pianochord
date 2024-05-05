@@ -40,7 +40,9 @@ export default class Playbox extends Component<PlayboxProps> {
   render() {
     const offset = 12 * (1 + this.props.offset);
     const notes = allNotes.slice(offset, offset + 36);
-    const highlightedNotes = notes.filter((_, i) => this.props.highlightTable[i]);
+    const highlightedNotes = notes.filter((_, i) =>
+      this.props.highlightTable[i]
+    );
 
     return (
       <div class={"playbox-container color-" + this.props.color}>

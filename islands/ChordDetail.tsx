@@ -36,7 +36,7 @@ export default class ChordDetail
         path[4] = i.toString();
       }
       if (i == 0) path = path.slice(0, 4);
-      history.replaceState('chord-detail', '', path.join('/'))
+      history.replaceState("chord-detail", "", path.join("/"));
     };
   }
 
