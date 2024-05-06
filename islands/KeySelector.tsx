@@ -12,7 +12,7 @@ type KeySelectorProps = {
 export default class KeySelector extends Component<KeySelectorProps> {
   render() {
     return (
-      <div className="keySelector-container">
+      <div className="keySelector-container max-w-[63rem] mx-auto my-4 px-2 flex flex-row justify-around gap-1 flex-wrap">
         {this.props.link === true &&
           simpleKeys.map((key, i) => (
             <a

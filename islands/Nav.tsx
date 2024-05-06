@@ -4,15 +4,9 @@ type NavProps = {
   chordUrl?: string;
 };
 
-type NavState = {};
-
-export default class Nav extends Component<NavProps, NavState> {
+export default class Nav extends Component<NavProps> {
   constructor(props: NavProps) {
     super(props);
-  }
-
-  componentDidUpdate() {
-    document.body.classList.remove("disable-scrolling");
   }
 
   render() {
@@ -33,17 +27,18 @@ export default class Nav extends Component<NavProps, NavState> {
             <li>
               <a
                 href={"/"}
+                className="data-[current]:text-gray-500"
               >
                 Chords
               </a>
             </li>
             <li>
-              <a href="/whiteboard">
+              <a href="/whiteboard" className="data-[current]:text-gray-500">
                 Whiteboard
               </a>
             </li>
             <li>
-              <a href="/about">
+              <a href="/about" className="data-[current]:text-gray-500">
                 About
               </a>
             </li>
