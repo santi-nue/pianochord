@@ -10,23 +10,14 @@ export default class AboutPage extends Component {
     return (
       <div className="about-container">
         <Decoration />
-        <div className="content-container">
-          <h1>About</h1>
-          <div>
+        <div className="content-container mb-2 p-4">
+          <h1 className="text-4xl font-normal my-4 text-gray-800">About</h1>
+          <div className="leading-5 text-gray-600">
             PianoChord.app will always be free and open source. The motivation
             of this project is to provide music lovers, students and educators
             an easy-to-use tool to visualize and learn common piano chords. We
             insist on high bar of user experience, mobile friendliness, and most
             importantly, the correctness of the data.
-          </div>
-          <h1>Report a Bug</h1>
-          <div>
-            Don't hesitate to report a bug if you find we have the wrong chord
-            data or anything else goes wrong. Feature requests are also
-            welcomed! To do so, please open an issue in{" "}
-            <a href="https://github.com/dunkbing/pianochord/issues">
-              Github Issues
-            </a>.
           </div>
         </div>
       </div>

@@ -6,7 +6,6 @@ import AboutPage from "../components/AboutPage.tsx";
 export default function About() {
   return (
     <Fragment>
-      <Nav />
       <AboutPage />
     </Fragment>
   );

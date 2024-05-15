@@ -11,9 +11,14 @@ export default class Nav extends Component<NavProps> {
 
   render() {
     return (
-      <nav class="navbar">
-        <div class="logo">
-          <a href="/">PianoChord.app</a>
+      <nav class="navbar mx-auto max-w-5xl px-2 py-5 flex items-center justify-between text-black">
+        <div class="">
+          <a
+            href="/"
+            class="text-2xl font-bold bg-gradient-to-r from-gray-900 via-gray-500 to-gray-900 bg-clip-text text-transparent hover:text-black"
+          >
+            PianoChord.app
+          </a>
         </div>
         <ul class="nav-links">
           <input type="checkbox" id="checkbox_toggle" checked={false} />
