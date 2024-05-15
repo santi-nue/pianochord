@@ -13,7 +13,7 @@ export default class Nav extends Component<NavProps> {
     return (
       <nav class="navbar">
         <div class="logo">
-          <a href="/">PianoChord.io</a>
+          <a href="/">PianoChord.app</a>
         </div>
         <ul class="nav-links">
           <input type="checkbox" id="checkbox_toggle" checked={false} />

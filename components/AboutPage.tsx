@@ -13,9 +13,9 @@ export default class AboutPage extends Component {
         <div className="content-container">
           <h1>About</h1>
           <div>
-            PianoChord.io will always be free and open source. The motivation of
-            this project is to provide music lovers, students and educators an
-            easy-to-use tool to visualize and learn common piano chords. We
+            PianoChord.app will always be free and open source. The motivation
+            of this project is to provide music lovers, students and educators
+            an easy-to-use tool to visualize and learn common piano chords. We
             insist on high bar of user experience, mobile friendliness, and most
             importantly, the correctness of the data.
           </div>
