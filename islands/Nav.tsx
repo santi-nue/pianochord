@@ -38,6 +38,14 @@ export default class Nav extends Component<NavProps> {
               </a>
             </li>
             <li>
+              <a
+                href={"/sheet"}
+                className="data-[current]:text-gray-500"
+              >
+                Sheet
+              </a>
+            </li>
+            <li>
               <a href="/whiteboard" className="data-[current]:text-gray-500">
                 Whiteboard
               </a>

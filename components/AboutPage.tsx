@@ -13,11 +13,13 @@ export default class AboutPage extends Component {
         <div className="content-container mb-2 p-4">
           <h1 className="text-4xl font-normal my-4 text-gray-800">About</h1>
           <div className="leading-5 text-gray-600">
-            PianoChord.app will always be free and open source. The motivation
-            of this project is to provide music lovers, students and educators
-            an easy-to-use tool to visualize and learn common piano chords. We
-            insist on high bar of user experience, mobile friendliness, and most
-            importantly, the correctness of the data.
+            PianoChord.app: Your Go-To Resource for Piano Chords This is an
+            intuitive, mobile-friendly tool designed to help music lovers,
+            students, and educators easily visualize and learn common piano
+            chords. With a focus on user experience and data accuracy, our
+            platform provides a reliable and engaging way to master chords and
+            expand your musical knowledge. Join us today and elevate your piano
+            skills!
           </div>
         </div>
       </div>
