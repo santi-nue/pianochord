@@ -1,4 +1,4 @@
-name: Deploy
+uname: Deploy
 on:
   push:
     branches: main
@@ -29,7 +29,7 @@ jobs:
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
         with:
-          project: "santi-nue-pianochord-35"
+          project: "santi-nue-pianochord"
           entrypoint: "main.ts"
           root: "."
           
